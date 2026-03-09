@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="fr" >
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="">
+    <title>
+        RXCORP
+                - Page introuvable
+            </title>
+    <!-- Livewire Styles --><style >[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: hsl(var(--color-primary));}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+    <link rel="preload" as="style" href="https://clients.rxcorp.fr/default/assets/app-BRhvyQFQ.css" /><link rel="modulepreload" as="script" href="https://clients.rxcorp.fr/default/assets/app-B91Kqe9k.js" /><link rel="stylesheet" href="https://clients.rxcorp.fr/default/assets/app-BRhvyQFQ.css" data-navigate-track="reload" /><script type="module" src="https://clients.rxcorp.fr/default/assets/app-B91Kqe9k.js" data-navigate-track="reload"></script>    <style>
+    :root {
+        /* Branding Colors (Light) */
+        --color-primary: 348 100% 45%;
+        --color-secondary: 348 100% 30%;
+
+        /* Neutral Colors - Borders, Accents... (Light) */
+        --color-neutral: 220 25% 85%;
+
+        /* Text Colors (Light) */
+        --color-base: 0 0% 0%;
+        --color-muted: 220 28% 25%;
+        --color-inverted: 100 100% 100%;
+
+        /* State Colors */
+        --color-success: 142 71% 45%;
+        --color-error: 0 75% 60%;
+        --color-warning: 25 95% 53%;
+        --color-inactive: 0 0% 63%;
+        --color-info: 210 100% 60%;
+
+        /* Background Colors (Light) */
+        --color-background: 100 100% 100%;
+        --color-background-secondary: 0 0% 97%;
+    }
+
+    .dark {
+        /* Branding Colors (Dark) */
+        --color-primary: 348 100% 45%;
+        --color-secondary: 348 100% 30%;
+
+        /* Neutral Colors - Borders, Accents... (Dark) */
+        --color-neutral: 0 0% 7%;
+
+        /* Text Colors (Dark) */
+        --color-base: 100 100% 100%;
+        --color-muted: 220 28% 25%;
+        --color-inverted: 220 14% 60%;
+
+        /* Background Colors (Dark) */
+        --color-background: 240 18% 9%;
+        --color-background-secondary: 240 13% 11%;
+    }
+</style>
+            <meta content="RXCORP - Page introuvable" property="og:title">
+    <meta content="RXCORP - Page introuvable" name="title">
+            
+    <meta name="theme-color" content="hsl(348, 100%, 45%)">
+
+    <style>:root {
+  --primary-500: #E8002D !important;
+  --primary-400: #FF1A48 !important;
+  --primary-600: #B30022 !important;
+  --radius: 0.5rem !important;
+}
+.dark {
+  --background: #050510 !important;
+  --foreground: #ffffff !important;
+}
+/* Forcer la navbar et sidebar dans un style dark/glass */
+nav, aside {
+  background-color: rgba(5, 5, 16, 0.8) !important;
+  backdrop-filter: blur(12px) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}</style>
+</head>
+
+<body class="w-full bg-background text-base min-h-screen flex flex-col antialiased" x-cloak x-data="{darkMode: $persist(window.matchMedia('(prefers-color-scheme: dark)').matches)}" :class="{'dark': darkMode}">
+    
+    <nav class="w-full px-4 lg:px-8 bg-background-secondary border-b border-neutral md:h-16 flex md:flex-row flex-col justify-between fixed top-0 z-20">
+    <div
+        x-data="{ 
+            slideOverOpen: false,
+            hasAside: !!document.getElementById('main-aside')
+        }"
+        x-init="$watch('slideOverOpen', value => { document.documentElement.style.overflow = value ? 'hidden' : '' })"
+        class="relative z-50 w-full h-auto">
+        <div
+            class="flex flex-row items-center justify-between h-16"
+            :class="hasAside ? 'w-full' : 'container'">
+
+            <div class="flex flex-row items-center">
+                <a href="https://clients.rxcorp.fr" class="flex flex-row items-center h-10 gap-2" wire:navigate>
+                                                            <span class="text-xl font-bold leading-none flex items-center">RXCORP</span>
+                                    </a>
+                <div class="md:flex hidden flex-row ml-6">
+                                                            <a href="https://clients.rxcorp.fr" class="flex flex-row items-center p-3 gap-2 text-sm font-semibold text-wrap text-base hover:text-base/80 flex items-center p-3"  wire:navigate >
+    Accueil
+</a>                                        
+                    
+                </div>
+            </div>
+
+            <div class="flex flex-row items-center">
+                <div wire:snapshot="{&quot;data&quot;:{&quot;cartCount&quot;:0},&quot;memo&quot;:{&quot;id&quot;:&quot;3a0PKxdo09dAPXsm0cwF&quot;,&quot;name&quot;:&quot;components.cart&quot;,&quot;path&quot;:&quot;store&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;fr&quot;},&quot;checksum&quot;:&quot;c9bb3940d0d3375f3d049220e85db623d9e64a8a920c772b2a77f8ce425eacd1&quot;}" wire:effects="{&quot;partials&quot;:[],&quot;listeners&quot;:[&quot;cartUpdated&quot;]}" wire:id="3a0PKxdo09dAPXsm0cwF"></div>
+                <div class="items-center hidden md:flex mr-1">
+                    <div class="relative" x-data="{ open: false, adjustWidth: 0 }" x-init="$watch('open', value => {
+    if (value) {
+        adjustWidth = 0; // Reset adjustWidth when opening
+        $nextTick(() => {
+            let dropdown = $refs.dropdown;
+            let rect = dropdown.getBoundingClientRect();
+            let windowWidth = window.innerWidth;
+            adjustWidth = rect.right > windowWidth ? rect.width - 40 : 0;
+        });
+    }
+})">
+
+    <button
+        class="flex flex-row items-center px-2 py-1 text-sm font-semibold whitespace-nowrap text-base hover:text-base/80"
+        x-on:click="open = !open">
+        <div class="flex flex-col">
+                                <span class="text-sm text-base font-semibold text-nowrap">FR <span class="text-base/50 font-semibold">|</span> US Dollar</span>
+                            </div>
+                <svg x-bind:class="{ '-rotate-180' : open }" class="md:block hidden size-4 text-base ease-out duration-300" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>            </button>
+
+    <div x-ref="dropdown"
+        class="absolute mt-2 w-48 px-2 py-1 bg-background-secondary rounded-md shadow-lg z-10 border border-neutral"
+        x-bind:style="{
+            left: `-${adjustWidth}px`,
+        }"
+        x-show="open"
+        x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 scale-90"
+        x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-75"
+        x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+        x-on:click.outside="open = false" x-cloak>
+        <strong class="block p-2 text-xs font-semibold uppercase text-base/50"> Language </strong>
+                            <div wire:snapshot="{&quot;data&quot;:{&quot;currentLocale&quot;:&quot;fr&quot;},&quot;memo&quot;:{&quot;id&quot;:&quot;QZgBOSUKsHXifJAJ6fr6&quot;,&quot;name&quot;:&quot;components.language-switch&quot;,&quot;path&quot;:&quot;store&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;fr&quot;},&quot;checksum&quot;:&quot;5f7e85fcefbf3fdeb6c836cb6fb17cbaab4b53699024b476792ca573ed9e8b8e&quot;}" wire:effects="{&quot;partials&quot;:[]}" wire:id="QZgBOSUKsHXifJAJ6fr6"
+    x-data="{
+        selectOpen: false,
+        selectedValue: window.Livewire.find('QZgBOSUKsHXifJAJ6fr6').entangle('currentLocale').live,
+        selectableItems: [{&quot;value&quot;:&quot;ar&quot;,&quot;label&quot;:&quot;Arabic&quot;},{&quot;value&quot;:&quot;de&quot;,&quot;label&quot;:&quot;German&quot;},{&quot;value&quot;:&quot;en&quot;,&quot;label&quot;:&quot;English&quot;},{&quot;value&quot;:&quot;es&quot;,&quot;label&quot;:&quot;Spanish&quot;},{&quot;value&quot;:&quot;fi&quot;,&quot;label&quot;:&quot;Finnish&quot;},{&quot;value&quot;:&quot;fr&quot;,&quot;label&quot;:&quot;French&quot;},{&quot;value&quot;:&quot;id&quot;,&quot;label&quot;:&quot;Indonesian&quot;},{&quot;value&quot;:&quot;it&quot;,&quot;label&quot;:&quot;Italian&quot;},{&quot;value&quot;:&quot;sv&quot;,&quot;label&quot;:&quot;Swedish&quot;},{&quot;value&quot;:&quot;uk&quot;,&quot;label&quot;:&quot;Ukrainian&quot;},{&quot;value&quot;:&quot;ko&quot;,&quot;label&quot;:&quot;Korean&quot;},{&quot;value&quot;:&quot;lv&quot;,&quot;label&quot;:&quot;Latvian&quot;},{&quot;value&quot;:&quot;nl&quot;,&quot;label&quot;:&quot;Dutch&quot;},{&quot;value&quot;:&quot;no&quot;,&quot;label&quot;:&quot;Norwegian&quot;},{&quot;value&quot;:&quot;pt&quot;,&quot;label&quot;:&quot;Portuguese&quot;},{&quot;value&quot;:&quot;sr&quot;,&quot;label&quot;:&quot;Serbian&quot;}],
+        selectableItemActive: null,
+        selectId: $id('select'),
+        selectDropdownPosition: 'bottom',
+
+        init() {
+            this.$watch('selectOpen', () => {
+                if (this.selectOpen) {
+                    this.selectableItemActive = this.selectableItems.find(item => item.value === this.selectedValue) 
+                        || this.selectableItems[0];
+                    this.$nextTick(() => this.selectScrollToActiveItem());
+                }
+                this.selectPositionUpdate();
+            });
+
+            window.addEventListener('resize', this.resizeHandler = () => this.selectPositionUpdate());
+            this.$el.addEventListener('alpine:destroyed', () => window.removeEventListener('resize', this.resizeHandler));
+        },
+
+        selectableItemIsActive(item) {
+            return this.selectableItemActive && this.selectableItemActive.value === item.value;
+        },
+
+        selectableItemActiveNext() {
+            let index = this.selectableItems.indexOf(this.selectableItemActive);
+            if (index < this.selectableItems.length - 1) {
+                this.selectableItemActive = this.selectableItems[index + 1];
+                this.selectScrollToActiveItem();
+            }
+        },
+
+        selectableItemActivePrevious() {
+            let index = this.selectableItems.indexOf(this.selectableItemActive);
+            if (index > 0) {
+                this.selectableItemActive = this.selectableItems[index - 1];
+                this.selectScrollToActiveItem();
+            }
+        },
+
+        selectScrollToActiveItem() {
+            if (this.selectableItemActive) {
+                const activeElement = document.getElementById(this.selectableItemActive.value + '-' + this.selectId);
+                if (activeElement) {
+                    activeElement.scrollIntoView({ block: 'nearest' });
+                }
+            }
+        },
+
+        selectPositionUpdate() {
+            if (!this.$refs.selectButton || !this.$refs.selectableItemsList) return;
+            
+            const selectDropdownBottomPos = this.$refs.selectButton.getBoundingClientRect().top + 
+                this.$refs.selectButton.offsetHeight + 
+                this.$refs.selectableItemsList.offsetHeight;
+            
+            this.selectDropdownPosition = window.innerHeight < selectDropdownBottomPos ? 'top' : 'bottom';
+        }
+    }"
+    @keydown.escape="selectOpen = false"
+    @keydown.down.prevent="if(selectOpen) { selectableItemActiveNext() } else { selectOpen = true }"
+    @keydown.up.prevent="if(selectOpen) { selectableItemActivePrevious() } else { selectOpen = true }"
+    @keydown.enter.prevent="selectedValue = selectableItemActive.value; selectOpen = false"
+    class="relative w-full"
+>
+    <button 
+        x-ref="selectButton"
+        @click="selectOpen = !selectOpen"
+        :class="{ 'ring-2 ring-offset-2 ring-neutral-800': selectOpen }"
+        class="relative w-full min-h-[38px] py-2 pl-3 pr-10 text-left bg-background-secondary border border-neutral rounded-md shadow-sm cursor-pointer text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-800"
+        type="button"
+    >
+        <span x-text="selectableItems.find(item => item.value === selectedValue)?.label ?? 'Select language'" class="block truncate"></span>
+        <span class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+            <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.2072 9.0428 12.0001 2.83569 5.793 9.0428 7.20721 10.457 12.0001 5.66412 16.793 10.457 18.2072 9.0428ZM5.79285 14.9572 12 21.1643 18.2071 14.9572 16.7928 13.543 12 18.3359 7.20706 13.543 5.79285 14.9572Z"/></svg>        </span>
+    </button>
+
+    <ul
+        x-show="selectOpen"
+        x-ref="selectableItemsList"
+        @click.away="selectOpen = false"
+        x-transition:enter="transition ease-out duration-100"
+        x-transition:enter-start="opacity-0 scale-95"
+        x-transition:enter-end="opacity-100 scale-100"
+        :class="{ 'bottom-full mb-1': selectDropdownPosition === 'top', 'top-full mt-1': selectDropdownPosition === 'bottom' }"
+        class="absolute z-50 w-full py-1 overflow-auto bg-background-secondary border border-neutral rounded-lg shadow-lg max-h-60 focus:outline-none text-sm"
+        x-cloak
+    >
+        <template x-for="item in selectableItems" :key="item.value">
+            <li
+                :id="item.value + '-' + selectId"
+                @click="selectedValue = item.value; selectOpen = false"
+                @mousemove="selectableItemActive = item"
+                :class="{ 'bg-neutral-700': selectableItemIsActive(item) }"
+                class="relative py-2 pl-8 pr-4 cursor-pointer select-none hover:bg-neutral-700"
+            >
+                <span 
+                    class="block truncate"
+                    :class="{ 'font-semibold': item.value === selectedValue }"
+                    x-text="item.label"
+                ></span>
+                <span
+                    x-show="item.value === selectedValue"
+                    class="absolute inset-y-0 left-0 flex items-center pl-2 text-neutral-400"
+                >
+                    <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9.9997 15.1709L19.1921 5.97852L20.6063 7.39273L9.9997 17.9993L3.63574 11.6354L5.04996 10.2212L9.9997 15.1709Z"/></svg>                </span>
+            </li>
+        </template>
+    </ul>
+</div>                            <div wire:snapshot="{&quot;data&quot;:{&quot;currentCurrency&quot;:&quot;USD&quot;},&quot;memo&quot;:{&quot;id&quot;:&quot;guNM13rb8NpjYvko4D3M&quot;,&quot;name&quot;:&quot;components.currency-switch&quot;,&quot;path&quot;:&quot;store&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;fr&quot;},&quot;checksum&quot;:&quot;ea670496422005e396536bc98515a46cdafdc253635935b9b89d13e1aef1e255&quot;}" wire:effects="{&quot;partials&quot;:[]}" wire:id="guNM13rb8NpjYvko4D3M"></div>
+    </div>
+</div>                    <button @click="darkMode = !darkMode" type="button" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-neutral transition">
+    <template x-if="!darkMode">
+        <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"/></svg>    </template>
+    <template x-if="darkMode">
+        <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11.3807 2.01886C9.91573 3.38768 9 5.3369 9 7.49999C9 11.6421 12.3579 15 16.5 15C18.6631 15 20.6123 14.0843 21.9811 12.6193C21.6613 17.8537 17.3149 22 12 22C6.47715 22 2 17.5228 2 12C2 6.68514 6.14629 2.33869 11.3807 2.01886Z"/></svg>    </template>
+</button>
+                </div>
+
+                                <div class="hidden lg:flex flex-row gap-3">
+                    <a href="https://clients.rxcorp.fr/login" wire:navigate>
+                        <button 
+    class="flex items-center gap-2 justify-center bg-background-secondary text-sm font-semibold border border-neutral hover:bg-background-secondary/80 py-2.5 lg:py-2 px-4.5 rounded-md w-full duration-300 cursor-pointer disabled:cursor-not-allowed disabled:opacity-50">
+            Connexion
+    </button>
+                    </a>
+                                        <a href="https://clients.rxcorp.fr/register" wire:navigate>
+                        <button 
+    class="flex items-center gap-2 justify-center bg-primary text-white text-sm font-semibold hover:bg-primary/80 py-2.5 lg:py-2 px-4.5 rounded-md w-full duration-300 cursor-pointer disabled:cursor-not-allowed disabled:opacity-50">
+            S&#039;inscrire
+    </button>
+                    </a>
+                                    </div>
+                                <button
+                    @click="slideOverOpen = !slideOverOpen"
+                    class="relative w-10 h-10 flex lg:hidden items-center justify-center rounded-lg hover:bg-neutral transition"
+                    aria-label="Toggle Menu">
+
+                    <span
+                        x-show="!slideOverOpen"
+                        x-transition:enter="transition duration-300"
+                        x-transition:enter-start="opacity-0 -rotate-90 scale-75"
+                        x-transition:enter-end="opacity-100 rotate-0 scale-100"
+                        x-transition:leave="transition duration-150"
+                        x-transition:leave-start="opacity-100 rotate-0 scale-100"
+                        x-transition:leave-end="opacity-0 rotate-90 scale-75"
+                        class="absolute inset-0 flex items-center justify-center"
+                        aria-hidden="true">
+                        <svg class="size-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"/></svg>                    </span>
+
+                    <span
+                        x-show="slideOverOpen"
+                        x-transition:enter="transition duration-300"
+                        x-transition:enter-start="opacity-0 rotate-90 scale-75"
+                        x-transition:enter-end="opacity-100 rotate-0 scale-100"
+                        x-transition:leave="transition duration-150"
+                        x-transition:leave-start="opacity-100 rotate-0 scale-100"
+                        x-transition:leave-end="opacity-0 -rotate-90 scale-75"
+                        class="absolute inset-0 flex items-center justify-center"
+                        aria-hidden="true">
+                        <svg class="size-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"/></svg>                    </span>
+
+                </button>
+            </div>
+        </div>
+        <template x-teleport="body">
+            <div
+                x-show="slideOverOpen"
+                @keydown.window.escape="slideOverOpen=false"
+                x-cloak
+                class="fixed left-0 right-0 top-16 w-full z-[99]"
+                style="height:calc(100dvh - 4rem);"
+                aria-modal="true"
+                tabindex="-1">
+                <div
+                    x-show="slideOverOpen"
+                    @click.away="slideOverOpen = false"
+                    x-transition.opacity.duration.300ms
+                    class="absolute inset-0 bg-background-secondary border-t border-neutral shadow-lg overflow-y-auto flex flex-col">
+
+                    <div class="flex flex-col h-full p-4">
+                        <div class="flex-1 min-h-0 overflow-y-auto">
+                            <div class="lg:px-4 lg:py-6 flex flex-col gap-2">
+    <div class="flex flex-col gap-2 md:hidden">
+                        <div class="flex items-center rounded-lg hover:bg-primary/5">
+            <a href="https://clients.rxcorp.fr" class="flex flex-row items-center p-3 gap-2 text-sm font-semibold text-wrap text-base hover:text-base/80 w-full"  wire:navigate >
+    <svg class="size-5 fill-base/50" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19 21H5C4.44772 21 4 20.5523 4 20V11L1 11L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11L20 11V20C20 20.5523 19.5523 21 19 21ZM6 19H18V9.15745L12 3.7029L6 9.15745V19Z"/></svg>                                Accueil
+</a>        </div>
+                            </div>
+
+    <div class="flex flex-col gap-2">
+                <div class="flex flex-row items-center mt-4 justify-between md:hidden">
+            <div class="relative" x-data="{ open: false, adjustWidth: 0 }" x-init="$watch('open', value => {
+    if (value) {
+        adjustWidth = 0; // Reset adjustWidth when opening
+        $nextTick(() => {
+            let dropdown = $refs.dropdown;
+            let rect = dropdown.getBoundingClientRect();
+            let windowWidth = window.innerWidth;
+            adjustWidth = rect.right > windowWidth ? rect.width - 40 : 0;
+        });
+    }
+})">
+
+    <button
+        class="flex flex-row items-center px-2 py-1 text-sm font-semibold whitespace-nowrap text-base hover:text-base/80"
+        x-on:click="open = !open">
+        <div class="flex flex-col">
+                        <span class="text-sm text-base font-semibold text-nowrap">FR <span class="text-base/50 font-semibold">|</span> USD</span>
+                    </div>
+                <svg x-bind:class="{ '-rotate-180' : open }" class="md:block hidden size-4 text-base ease-out duration-300" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>            </button>
+
+    <div x-ref="dropdown"
+        class="absolute mt-2 w-48 px-2 py-1 bg-background-secondary rounded-md shadow-lg z-10 border border-neutral"
+        x-bind:style="{
+            left: `-${adjustWidth}px`,
+        }"
+        x-show="open"
+        x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 scale-90"
+        x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-75"
+        x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+        x-on:click.outside="open = false" x-cloak>
+        <strong class="block p-2 text-xs font-semibold uppercase text-base/50"> Language </strong>
+                    <div wire:snapshot="{&quot;data&quot;:{&quot;currentLocale&quot;:&quot;fr&quot;},&quot;memo&quot;:{&quot;id&quot;:&quot;BSYKt7Hn3qsMSL6lRcSL&quot;,&quot;name&quot;:&quot;components.language-switch&quot;,&quot;path&quot;:&quot;store&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;fr&quot;},&quot;checksum&quot;:&quot;d1967f43a7f38040b19cc16f93cf5d96b609a1799c41a15527387983e539ac0d&quot;}" wire:effects="{&quot;partials&quot;:[]}" wire:id="BSYKt7Hn3qsMSL6lRcSL"
+    x-data="{
+        selectOpen: false,
+        selectedValue: window.Livewire.find('BSYKt7Hn3qsMSL6lRcSL').entangle('currentLocale').live,
+        selectableItems: [{&quot;value&quot;:&quot;ar&quot;,&quot;label&quot;:&quot;Arabic&quot;},{&quot;value&quot;:&quot;de&quot;,&quot;label&quot;:&quot;German&quot;},{&quot;value&quot;:&quot;en&quot;,&quot;label&quot;:&quot;English&quot;},{&quot;value&quot;:&quot;es&quot;,&quot;label&quot;:&quot;Spanish&quot;},{&quot;value&quot;:&quot;fi&quot;,&quot;label&quot;:&quot;Finnish&quot;},{&quot;value&quot;:&quot;fr&quot;,&quot;label&quot;:&quot;French&quot;},{&quot;value&quot;:&quot;id&quot;,&quot;label&quot;:&quot;Indonesian&quot;},{&quot;value&quot;:&quot;it&quot;,&quot;label&quot;:&quot;Italian&quot;},{&quot;value&quot;:&quot;sv&quot;,&quot;label&quot;:&quot;Swedish&quot;},{&quot;value&quot;:&quot;uk&quot;,&quot;label&quot;:&quot;Ukrainian&quot;},{&quot;value&quot;:&quot;ko&quot;,&quot;label&quot;:&quot;Korean&quot;},{&quot;value&quot;:&quot;lv&quot;,&quot;label&quot;:&quot;Latvian&quot;},{&quot;value&quot;:&quot;nl&quot;,&quot;label&quot;:&quot;Dutch&quot;},{&quot;value&quot;:&quot;no&quot;,&quot;label&quot;:&quot;Norwegian&quot;},{&quot;value&quot;:&quot;pt&quot;,&quot;label&quot;:&quot;Portuguese&quot;},{&quot;value&quot;:&quot;sr&quot;,&quot;label&quot;:&quot;Serbian&quot;}],
+        selectableItemActive: null,
+        selectId: $id('select'),
+        selectDropdownPosition: 'bottom',
+
+        init() {
+            this.$watch('selectOpen', () => {
+                if (this.selectOpen) {
+                    this.selectableItemActive = this.selectableItems.find(item => item.value === this.selectedValue) 
+                        || this.selectableItems[0];
+                    this.$nextTick(() => this.selectScrollToActiveItem());
+                }
+                this.selectPositionUpdate();
+            });
+
+            window.addEventListener('resize', this.resizeHandler = () => this.selectPositionUpdate());
+            this.$el.addEventListener('alpine:destroyed', () => window.removeEventListener('resize', this.resizeHandler));
+        },
+
+        selectableItemIsActive(item) {
+            return this.selectableItemActive && this.selectableItemActive.value === item.value;
+        },
+
+        selectableItemActiveNext() {
+            let index = this.selectableItems.indexOf(this.selectableItemActive);
+            if (index < this.selectableItems.length - 1) {
+                this.selectableItemActive = this.selectableItems[index + 1];
+                this.selectScrollToActiveItem();
+            }
+        },
+
+        selectableItemActivePrevious() {
+            let index = this.selectableItems.indexOf(this.selectableItemActive);
+            if (index > 0) {
+                this.selectableItemActive = this.selectableItems[index - 1];
+                this.selectScrollToActiveItem();
+            }
+        },
+
+        selectScrollToActiveItem() {
+            if (this.selectableItemActive) {
+                const activeElement = document.getElementById(this.selectableItemActive.value + '-' + this.selectId);
+                if (activeElement) {
+                    activeElement.scrollIntoView({ block: 'nearest' });
+                }
+            }
+        },
+
+        selectPositionUpdate() {
+            if (!this.$refs.selectButton || !this.$refs.selectableItemsList) return;
+            
+            const selectDropdownBottomPos = this.$refs.selectButton.getBoundingClientRect().top + 
+                this.$refs.selectButton.offsetHeight + 
+                this.$refs.selectableItemsList.offsetHeight;
+            
+            this.selectDropdownPosition = window.innerHeight < selectDropdownBottomPos ? 'top' : 'bottom';
+        }
+    }"
+    @keydown.escape="selectOpen = false"
+    @keydown.down.prevent="if(selectOpen) { selectableItemActiveNext() } else { selectOpen = true }"
+    @keydown.up.prevent="if(selectOpen) { selectableItemActivePrevious() } else { selectOpen = true }"
+    @keydown.enter.prevent="selectedValue = selectableItemActive.value; selectOpen = false"
+    class="relative w-full"
+>
+    <button 
+        x-ref="selectButton"
+        @click="selectOpen = !selectOpen"
+        :class="{ 'ring-2 ring-offset-2 ring-neutral-800': selectOpen }"
+        class="relative w-full min-h-[38px] py-2 pl-3 pr-10 text-left bg-background-secondary border border-neutral rounded-md shadow-sm cursor-pointer text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-800"
+        type="button"
+    >
+        <span x-text="selectableItems.find(item => item.value === selectedValue)?.label ?? 'Select language'" class="block truncate"></span>
+        <span class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+            <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.2072 9.0428 12.0001 2.83569 5.793 9.0428 7.20721 10.457 12.0001 5.66412 16.793 10.457 18.2072 9.0428ZM5.79285 14.9572 12 21.1643 18.2071 14.9572 16.7928 13.543 12 18.3359 7.20706 13.543 5.79285 14.9572Z"/></svg>        </span>
+    </button>
+
+    <ul
+        x-show="selectOpen"
+        x-ref="selectableItemsList"
+        @click.away="selectOpen = false"
+        x-transition:enter="transition ease-out duration-100"
+        x-transition:enter-start="opacity-0 scale-95"
+        x-transition:enter-end="opacity-100 scale-100"
+        :class="{ 'bottom-full mb-1': selectDropdownPosition === 'top', 'top-full mt-1': selectDropdownPosition === 'bottom' }"
+        class="absolute z-50 w-full py-1 overflow-auto bg-background-secondary border border-neutral rounded-lg shadow-lg max-h-60 focus:outline-none text-sm"
+        x-cloak
+    >
+        <template x-for="item in selectableItems" :key="item.value">
+            <li
+                :id="item.value + '-' + selectId"
+                @click="selectedValue = item.value; selectOpen = false"
+                @mousemove="selectableItemActive = item"
+                :class="{ 'bg-neutral-700': selectableItemIsActive(item) }"
+                class="relative py-2 pl-8 pr-4 cursor-pointer select-none hover:bg-neutral-700"
+            >
+                <span 
+                    class="block truncate"
+                    :class="{ 'font-semibold': item.value === selectedValue }"
+                    x-text="item.label"
+                ></span>
+                <span
+                    x-show="item.value === selectedValue"
+                    class="absolute inset-y-0 left-0 flex items-center pl-2 text-neutral-400"
+                >
+                    <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9.9997 15.1709L19.1921 5.97852L20.6063 7.39273L9.9997 17.9993L3.63574 11.6354L5.04996 10.2212L9.9997 15.1709Z"/></svg>                </span>
+            </li>
+        </template>
+    </ul>
+</div>                    <div wire:snapshot="{&quot;data&quot;:{&quot;currentCurrency&quot;:&quot;USD&quot;},&quot;memo&quot;:{&quot;id&quot;:&quot;x4AhgsPcQhymFdnYpNti&quot;,&quot;name&quot;:&quot;components.currency-switch&quot;,&quot;path&quot;:&quot;store&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;fr&quot;},&quot;checksum&quot;:&quot;8564bf91bd6c6983072f34a53fdd6fed65a318399bcf7d176c2cbe0e14ba5981&quot;}" wire:effects="{&quot;partials&quot;:[]}" wire:id="x4AhgsPcQhymFdnYpNti"></div>
+    </div>
+</div>
+            <button @click="darkMode = !darkMode" type="button" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-neutral transition">
+    <template x-if="!darkMode">
+        <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"/></svg>    </template>
+    <template x-if="darkMode">
+        <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11.3807 2.01886C9.91573 3.38768 9 5.3369 9 7.49999C9 11.6421 12.3579 15 16.5 15C18.6631 15 20.6123 14.0843 21.9811 12.6193C21.6613 17.8537 17.3149 22 12 22C6.47715 22 2 17.5228 2 12C2 6.68514 6.14629 2.33869 11.3807 2.01886Z"/></svg>    </template>
+</button>
+
+        </div>
+    </div>
+</div>
+                        </div>
+                        <div class="mt-5">
+                                                        <div class="flex flex-col gap-3 mb-3">
+                                                                <a href="https://clients.rxcorp.fr/register" wire:navigate>
+                                    <button 
+    class="flex items-center gap-2 justify-center bg-primary text-white text-sm font-semibold hover:bg-primary/80 py-2.5 lg:py-2 px-4.5 rounded-md w-full duration-300 cursor-pointer disabled:cursor-not-allowed disabled:opacity-50">
+            S&#039;inscrire
+    </button>
+                                </a>
+                                                                <a href="https://clients.rxcorp.fr/login" wire:navigate>
+                                    <button 
+    class="flex items-center gap-2 justify-center bg-background-secondary text-sm font-semibold border border-neutral hover:bg-background-secondary/80 py-2.5 lg:py-2 px-4.5 rounded-md w-full duration-300 cursor-pointer disabled:cursor-not-allowed disabled:opacity-50">
+            Connexion
+    </button>
+                                </a>
+                            </div>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+</nav>
+    <div class="w-full flex flex-grow">
+                <div class=" flex flex-col flex-grow overflow-auto">
+            <main class="mt-16 grow">
+                <div class="container flex flex-col items-center justify-center text-center py-20">
+        <p class="text-base font-semibold text-primary">404</p>
+        <h1 class="mt-4 text-5xl font-semibold tracking-tight text-balance sm:text-7xl">
+            Page introuvable
+        </h1>
+        <p class="mt-6 text-lg font-medium text-pretty text-base/50 sm:text-xl/8">
+            Désolé, la page que vous cherchez est introuvable.
+        </p>
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a href="https://clients.rxcorp.fr" wire:navigate>
+                <button 
+    class="flex items-center gap-2 justify-center bg-primary text-white text-sm font-semibold hover:bg-primary/80 py-2.5 lg:py-2 px-4.5 rounded-md w-full duration-300 cursor-pointer disabled:cursor-not-allowed disabled:opacity-50">
+            Retour à la page d&#039;accueil
+    </button>
+            </a>
+        </div>
+    </div>
+            </main>
+            <div x-data>
+    <template x-for="(notification, index) in $store.notifications.notifications" :key="notification.id">
+        <div x-show="notification.show" x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-90" @click="$store.notifications.removeNotification(notification.id)"
+            :class="notification.type === 'success' ? 'bg-secondary' : 'bg-red-500'"
+            class="fixed text-white px-4 py-2 rounded shadow-md mb-4 z-50"
+            :style="'top: ' + (20 + index * 60) + 'px;left: 50%; transform: translateX(-50%);'">
+            <p x-text="notification.message"></p>
+        </div>
+    </template>
+</div>
+            <template x-teleport="body">
+    <div class="fixed inset-0 z-30 flex items-center justify-center overflow-hidden bg-black/50"
+        x-show="$store.confirmation.show" 
+        x-on:keydown.escape.window="!$store.confirmation.loading && $store.confirmation.close()">
+        <!-- Modal inner -->
+        <div class="px-6 py-4 w-full mx-2 md:mx-auto text-left bg-background-secondary rounded shadow-lg max-h-screen overflow-y-auto mb-8 mt-8 max-w-2xl"
+            x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 scale-90"
+            x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90">
+            <div class="flex justify-between items-center">
+
+                <h2 class="text-2xl font-semibold text-primary-100" x-text="$store.confirmation.title"></h2>
+                <button @click="!$store.confirmation.loading && $store.confirmation.close()" 
+                        class="text-primary-100"
+                        :class="{ 'opacity-50 cursor-not-allowed': $store.confirmation.loading }">
+                    <svg class="size-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"/></svg>                </button>
+            </div>
+            <div class="mt-4" x-text="$store.confirmation.message"></div>
+            <div class="mt-5 sm:mt-4 flex-col sm:flex-row flex sm:flex-row-reverse gap-2">
+                <button 
+    class="flex items-center gap-2 justify-center bg-primary text-white text-sm font-semibold hover:bg-primary/80 py-2.5 lg:py-2 px-4.5 rounded-md w-full duration-300 cursor-pointer disabled:cursor-not-allowed disabled:opacity-50" type="button" x-on:click="$store.confirmation.execute()" :disabled="$store.confirmation.loading">
+            <!-- Loading spinner -->
+                    <template x-if="$store.confirmation.loading">
+                        <div class="mr-2">
+                            <svg class="size-4 animate-spin" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C16.9706 3 21 7.02944 21 12H19C19 8.13401 15.866 5 12 5V3Z"/></svg>                        </div>
+                    </template>
+                    
+                    <span x-text="$store.confirmation.loading ? 'Loading...' : $store.confirmation.confirmText"></span>
+    </button>
+                
+                <button 
+    class="flex items-center gap-2 justify-center bg-primary text-white text-sm font-semibold hover:bg-primary/80 py-2.5 lg:py-2 px-4.5 rounded-md w-full duration-300 cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 bg-red-700 bg-none text-white py-2 px-4 rounded hover:bg-red-600" type="button" x-text="$store.confirmation.cancelText" x-on:click="!$store.confirmation.loading && $store.confirmation.close()" :disabled="$store.confirmation.loading">
+            
+    </button>
+            </div>
+        </div>
+    </div>
+</template>            <div class="flex">
+                <footer class="w-full px-4 py-4 lg:mt-72 mt-44  bg-background-secondary border-t border-neutral">
+    <div class="container my-12 mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
+        <div class="flex flex-col md:flex-row justify-between gap-2 items-center">
+            <div class="flex flex-col gap-6 items-start">
+                <div class="flex flex-row gap-2">
+                                                            <span class="text-xl font-bold leading-none flex items-center">RXCORP</span>
+                                    </div>
+                <div class="text-sm text-base/70">
+                    © 2026 RXCORP. | All rights reserved.
+                </div>
+                
+            </div>
+            <a class="bg-background-secondary border border-neutral p-2 rounded-lg transition-colors group mt-4 mb-6 flex items-center gap-2 text-base/50 hover:text-base" href="https://paymenter.org" target="_blank">
+                <p class="text-sm font-medium tracking-tight">Powered by</p>
+                <svg class="h-3.5 w-auto mt-0.5 text-current" width="635" height="124" viewBox="0 0 635 124" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.92 65.92V47.86H36.92C43.4533 47.86 48.1667 46.6467 51.06 44.22C54.0467 41.7 55.54 38.0133 55.54 33.16C55.54 28.3067 54.0467 24.6667 51.06 22.24C48.1667 19.72 43.4533 18.46 36.92 18.46H8.92V0.399992H38.18C46.1133 0.399992 52.8333 1.75333 58.34 4.46C63.94 7.07333 68.1867 10.8533 71.08 15.8C73.9733 20.6533 75.42 26.44 75.42 33.16C75.42 39.7867 73.9733 45.5733 71.08 50.52C68.1867 55.4667 63.94 59.2933 58.34 62C52.8333 64.6133 46.1133 65.92 38.18 65.92H8.92ZM0.24 97V0.399992H19.7V97H0.24ZM121.93 97C121.37 94.5733 120.903 92.1 120.53 89.58C120.25 87.06 120.11 84.5867 120.11 82.16V50.8C120.11 45.5733 118.85 41.8867 116.33 39.74C113.81 37.5 110.776 36.38 107.23 36.38C103.87 36.38 100.976 37.3133 98.5495 39.18C96.2162 40.9533 94.5829 43.8467 93.6495 47.86L75.8695 43.52C77.9229 36.1467 81.7962 30.5467 87.4895 26.72C93.1829 22.8933 100.136 20.98 108.35 20.98C117.776 20.98 125.196 23.5 130.61 28.54C136.023 33.4867 138.73 40.3467 138.73 49.12V80.48C138.73 85.9867 139.43 91.4933 140.83 97H121.93ZM96.5895 98.82C89.5895 98.82 84.1762 96.9067 80.3495 93.08C76.6162 89.2533 74.7495 84.3067 74.7495 78.24C74.7495 72.7333 76.5695 67.88 80.2095 63.68C83.9429 59.48 89.7295 56.7733 97.5695 55.56L125.01 50.94V63.26L104.15 67.6C100.136 68.44 97.3362 69.7 95.7495 71.38C94.1629 72.9667 93.3695 74.74 93.3695 76.7C93.3695 78.66 94.0229 80.34 95.3295 81.74C96.7295 83.0467 98.8762 83.7 101.77 83.7C104.756 83.7 107.65 83.0467 110.45 81.74C113.25 80.34 115.536 78.3333 117.31 75.72C119.176 73.0133 120.11 69.7933 120.11 66.06H124.87C124.87 72.78 123.61 78.6133 121.09 83.56C118.57 88.4133 115.163 92.1933 110.87 94.9C106.67 97.5133 101.91 98.82 96.5895 98.82ZM160.835 123.32C158.129 123.32 155.609 123.133 153.275 122.76C151.035 122.48 148.795 122.06 146.555 121.5V104.84C148.422 105.307 150.429 105.727 152.575 106.1C154.722 106.567 156.915 106.8 159.155 106.8C163.449 106.8 166.762 106.007 169.095 104.42C171.522 102.927 173.202 100.453 174.135 97L193.735 22.8H213.195L191.355 97C189.302 104 186.782 109.413 183.795 113.24C180.902 117.067 177.542 119.68 173.715 121.08C169.889 122.573 165.595 123.32 160.835 123.32ZM162.375 97L140.535 22.8H160.415L180.715 97H162.375ZM301.99 97V53.04C301.99 47.9067 300.777 44.0333 298.35 41.42C296.017 38.8067 293.077 37.5 289.53 37.5C285.984 37.5 282.997 38.8067 280.57 41.42C278.237 44.0333 277.07 47.9067 277.07 53.04H271.61C271.61 46.32 272.637 40.58 274.69 35.82C276.837 31.06 279.824 27.42 283.65 24.9C287.477 22.2867 291.91 20.98 296.95 20.98C303.857 20.98 309.504 23.5 313.89 28.54C318.37 33.4867 320.61 40.3933 320.61 49.26V97H301.99ZM215.05 97V22.8H233.67V97H215.05ZM258.59 97V53.04C258.59 47.9067 257.377 44.0333 254.95 41.42C252.617 38.8067 249.677 37.5 246.13 37.5C242.584 37.5 239.597 38.8067 237.17 41.42C234.837 44.0333 233.67 47.9067 233.67 53.04H229.61C229.61 46.32 230.59 40.58 232.55 35.82C234.604 31.06 237.45 27.42 241.09 24.9C244.824 22.2867 249.07 20.98 253.83 20.98C260.644 20.98 266.197 23.5 270.49 28.54C274.877 33.4867 277.07 40.3933 277.07 49.26V97H258.59ZM360.953 98.82C354.14 98.82 348.073 97.1867 342.753 93.92C337.433 90.6533 333.28 86.1267 330.293 80.34C327.4 74.46 325.953 67.6467 325.953 59.9C325.953 51.9667 327.447 45.1067 330.433 39.32C333.42 33.44 337.573 28.9133 342.893 25.74C348.213 22.5667 354.28 20.98 361.093 20.98C367.907 20.98 373.927 22.5667 379.153 25.74C384.38 28.9133 388.44 33.3933 391.333 39.18C394.32 44.9667 395.813 51.8733 395.813 59.9C395.813 60.8333 395.767 61.72 395.673 62.56C395.673 63.4 395.673 64.3333 395.673 65.36H337.573V52.34H381.953L376.773 59.9C376.773 51.5933 375.373 45.6667 372.573 42.12C369.867 38.48 366.04 36.66 361.093 36.66C356.333 36.66 352.46 38.48 349.473 42.12C346.58 45.6667 345.133 51.5933 345.133 59.9C345.133 67.6467 346.627 73.3867 349.613 77.12C352.6 80.76 356.66 82.58 361.793 82.58C365.247 82.58 368.233 81.7867 370.753 80.2C373.273 78.6133 375.14 76.14 376.353 72.78L393.853 77.82C391.893 84.1667 388.067 89.2533 382.373 93.08C376.773 96.9067 369.633 98.82 360.953 98.82ZM447.97 97V54.16C447.97 48.6533 446.617 44.5 443.91 41.7C441.203 38.9 437.843 37.5 433.83 37.5C429.817 37.5 426.457 38.9 423.75 41.7C421.043 44.5 419.69 48.6533 419.69 54.16H415.63C415.63 47.16 416.703 41.1867 418.85 36.24C421.09 31.2933 424.123 27.5133 427.95 24.9C431.87 22.2867 436.397 20.98 441.53 20.98C446.383 20.98 450.677 22.1933 454.41 24.62C458.237 26.9533 461.223 30.3133 463.37 34.7C465.517 38.9933 466.59 44.22 466.59 50.38V97H447.97ZM401.07 97V22.8H419.69V97H401.07ZM503.694 98.82C495.854 98.82 489.694 96.6267 485.214 92.24C480.734 87.76 478.494 81.1333 478.494 72.36V7.39999L496.974 3.76V69.98C496.974 73.9 497.954 76.84 499.914 78.8C501.968 80.76 504.814 81.74 508.454 81.74C510.228 81.74 511.861 81.6 513.354 81.32C514.848 80.9467 516.388 80.5733 517.974 80.2V97C515.828 97.56 513.634 97.98 511.394 98.26C509.154 98.6333 506.588 98.82 503.694 98.82ZM468.834 38.34V22.8H517.274V38.34H468.834ZM552.688 98.82C545.874 98.82 539.808 97.1867 534.488 93.92C529.168 90.6533 525.014 86.1267 522.028 80.34C519.134 74.46 517.688 67.6467 517.688 59.9C517.688 51.9667 519.181 45.1067 522.168 39.32C525.154 33.44 529.308 28.9133 534.628 25.74C539.948 22.5667 546.014 20.98 552.828 20.98C559.641 20.98 565.661 22.5667 570.888 25.74C576.114 28.9133 580.174 33.3933 583.068 39.18C586.054 44.9667 587.548 51.8733 587.548 59.9C587.548 60.8333 587.501 61.72 587.408 62.56C587.408 63.4 587.408 64.3333 587.408 65.36H529.308V52.34H573.688L568.508 59.9C568.508 51.5933 567.108 45.6667 564.308 42.12C561.601 38.48 557.774 36.66 552.828 36.66C548.068 36.66 544.194 38.48 541.208 42.12C538.314 45.6667 536.868 51.5933 536.868 59.9C536.868 67.6467 538.361 73.3867 541.348 77.12C544.334 80.76 548.394 82.58 553.528 82.58C556.981 82.58 559.968 81.7867 562.488 80.2C565.008 78.6133 566.874 76.14 568.088 72.78L585.588 77.82C583.628 84.1667 579.801 89.2533 574.108 93.08C568.508 96.9067 561.368 98.82 552.688 98.82ZM592.804 97V22.8H611.424V97H592.804ZM608.064 61.72C608.064 53.5067 608.998 46.3667 610.864 40.3C612.731 34.14 615.624 29.38 619.544 26.02C623.464 22.66 628.458 20.98 634.524 20.98V42.12H626.404C621.738 42.12 618.051 43.3333 615.344 45.76C612.731 48.0933 611.424 52.2 611.424 58.08L608.064 61.72Z" fill="currentColor" />
+                </svg>
+            </a>
+        </div>
+    </div>
+</footer>
+            </div>
+        </div>
+            </div>
+    <script data-navigate-once="true">window.livewireScriptConfig = {"csrf":null,"uri":"\/paymenter\/update","progressBar":"","nonce":""};</script> 
+    
+</body>
+
+</html>
