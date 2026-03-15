@@ -1,18 +1,10 @@
 import type { Metadata } from "next";
+import { getStatusData } from "@/lib/uptime";
 
 export const metadata: Metadata = {
     title: "Statut du réseau — rxcorp",
     description: "Statut en temps réel de l'infrastructure rxcorp : serveurs, réseau, panel.",
 };
-
-const SERVICES = [
-    { name: "Panel Pterodactyl", status: "operational" as const, latency: "12ms" },
-    { name: "Réseau Paris (FR1)", status: "operational" as const, latency: "2ms" },
-    { name: "API Paymenter", status: "operational" as const, latency: "8ms" },
-    { name: "Hébergement Web", status: "operational" as const, latency: "18ms" },
-    { name: "Protection Anti-DDoS", status: "operational" as const, latency: "< 1ms" },
-    { name: "DNS", status: "operational" as const, latency: "4ms" },
-];
 
 const STATUS_META = {
     operational: { label: "Opérationnel", color: "#00E676", bg: "rgba(0,230,118,0.1)", border: "rgba(0,230,118,0.3)" },
@@ -20,8 +12,28 @@ const STATUS_META = {
     outage: { label: "Panne", color: "#FF1744", bg: "rgba(255,23,68,0.1)", border: "rgba(255,23,68,0.3)" },
 };
 
-export default function StatutPage() {
-    const allOk = SERVICES.every(s => s.status === "operational");
+export default async function StatutPage() {
+    const data = await getStatusData();
+
+    // Map Uptime Kuma data to our format
+    const monitors = data?.publicGroupList[0]?.monitorList.map(m => {
+        const heartbeats = data.heartbeatList[m.id] || [];
+        const latest = heartbeats[heartbeats.length - 1];
+        
+        // Uptime Kuma statuses: 0 = Down, 1 = Up, 2 = Pending, 3 = Maintenance
+        let status: "operational" | "degraded" | "outage" = "operational";
+        if (latest?.status === 0) status = "outage";
+        if (latest?.status === 3) status = "degraded";
+
+        return {
+            name: m.name,
+            status,
+            latency: latest?.ping ? `${latest.ping}ms` : "N/A"
+        };
+    }) || [];
+
+    const allOk = monitors.length > 0 && monitors.every(s => s.status === "operational");
+    const avgUptime = data?.uptimeList ? Object.values(data.uptimeList).reduce((a, b) => a + b, 0) / Object.values(data.uptimeList).length : 1;
 
     return (
         <section style={{
@@ -62,7 +74,7 @@ export default function StatutPage() {
                 {/* Services */}
                 <h2 className="heading-md" style={{ marginBottom: "24px", fontSize: "1.4rem" }}>Services</h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-                    {SERVICES.map(({ name, status, latency }) => {
+                    {monitors.map(({ name, status, latency }) => {
                         const meta = STATUS_META[status];
                         return (
                             <div key={name} className="glass" style={{
@@ -95,24 +107,23 @@ export default function StatutPage() {
 
                 {/* Uptime history */}
                 <div style={{ marginTop: "48px" }}>
-                    <h2 style={{ fontWeight: 700, fontSize: "1.1rem", marginBottom: "20px" }}>Historique 30 jours</h2>
+                    <h2 style={{ fontWeight: 700, fontSize: "1.1rem", marginBottom: "20px" }}>Historique 24 heures</h2>
                     <div style={{ display: "flex", gap: "3px", height: "32px", alignItems: "center" }}>
-                        {Array.from({ length: 30 }).map((_, i) => (
+                        {Array.from({ length: 48 }).map((_, i) => (
                             <div
                                 key={i}
                                 style={{
-                                    flex: 1, height: i === 7 ? "60%" : "100%",
-                                    background: i === 7 ? "#FFD700" : "#00E676",
+                                    flex: 1, height: "100%",
+                                    background: "#00E676",
                                     borderRadius: "3px",
                                     opacity: 0.8,
                                 }}
-                                title={i === 7 ? "Maintenance planifiée" : "Opérationnel"}
                             />
                         ))}
                     </div>
                     <div style={{ display: "flex", justifyContent: "space-between", marginTop: "8px" }}>
-                        <span style={{ color: "var(--text-muted)", fontSize: "0.75rem" }}>Il y a 30 jours</span>
-                        <span style={{ color: "#00E676", fontSize: "0.75rem", fontWeight: 700 }}>99.97% uptime</span>
+                        <span style={{ color: "var(--text-muted)", fontSize: "0.75rem" }}>Il y a 24 heures</span>
+                        <span style={{ color: "#00E676", fontSize: "0.75rem", fontWeight: 700 }}>{(avgUptime * 100).toFixed(2)}% uptime</span>
                         <span style={{ color: "var(--text-muted)", fontSize: "0.75rem" }}>Aujourd&apos;hui</span>
                     </div>
                 </div>

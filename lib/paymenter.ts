@@ -49,7 +49,7 @@ interface PaginatedResponse<T> {
 // API functions
 export async function getCategories(): Promise<Category[]> {
     try {
-        const res = await apiFetch<PaginatedResponse<Category>>("/categories?per_page=50");
+        const res = await apiFetch<PaginatedResponse<Category>>("/categories");
         return res.data ?? [];
     } catch {
         return [];
@@ -58,7 +58,7 @@ export async function getCategories(): Promise<Category[]> {
 
 export async function getProducts(): Promise<Product[]> {
     try {
-        const res = await apiFetch<PaginatedResponse<Product>>("/services?per_page=50");
+        const res = await apiFetch<PaginatedResponse<Product>>("/products");
         return res.data ?? [];
     } catch {
         return [];

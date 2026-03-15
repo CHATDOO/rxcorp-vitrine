@@ -40,7 +40,7 @@ export default async function HomePage() {
   const allProducts = products.status === "fulfilled" ? products.value : FALLBACK_PRODUCTS;
   const totalOrders = orders.status === "fulfilled" ? orders.value.total : 1847;
 
-  const featured = allProducts.filter(p => p.is_featured).slice(0, 3);
+  const featured = allProducts.slice(0, 6);
   const displayProducts = featured.length >= 3 ? featured : allProducts.slice(0, 6);
 
   return (
