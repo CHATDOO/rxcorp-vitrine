@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getStatusData } from "@/lib/uptime";
+import { getDaemonHealth } from "@/lib/daemon";
 
 export const metadata: Metadata = {
     title: "Statut du réseau — rxcorp",
@@ -13,7 +14,10 @@ const STATUS_META = {
 };
 
 export default async function StatutPage() {
-    const data = await getStatusData();
+    const [data, daemonHealth] = await Promise.all([
+        getStatusData(),
+        getDaemonHealth(),
+    ]);
 
     // Map Uptime Kuma data to our format
     const monitors = data?.publicGroupList[0]?.monitorList.map(m => {
@@ -69,6 +73,39 @@ export default async function StatutPage() {
                     <p style={{ color: "var(--text-secondary)", fontSize: "0.9rem" }}>
                         Dernière mise à jour : {new Date().toLocaleString("fr-FR")}
                     </p>
+                </div>
+
+                {/* Daemon RXCORP */}
+                <h2 className="heading-md" style={{ marginBottom: "16px", fontSize: "1.4rem" }}>Daemon de jeu</h2>
+                <div className="glass" style={{
+                    borderRadius: "12px", padding: "20px 24px",
+                    display: "flex", alignItems: "center", justifyContent: "space-between",
+                    gap: "16px", marginBottom: "36px",
+                }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                        <div style={{
+                            width: "8px", height: "8px", borderRadius: "50%",
+                            background: daemonHealth ? "#00E676" : "#FF1744",
+                            boxShadow: `0 0 8px ${daemonHealth ? "#00E676" : "#FF1744"}`,
+                        }} />
+                        <span style={{ fontWeight: 600 }}>RXCORP Daemon</span>
+                        {daemonHealth && (
+                            <span style={{ color: "var(--text-muted)", fontSize: "0.78rem" }}>
+                                v{daemonHealth.version}
+                            </span>
+                        )}
+                    </div>
+                    <div style={{
+                        padding: "4px 12px",
+                        background: daemonHealth ? "rgba(0,230,118,0.1)" : "rgba(255,23,68,0.1)",
+                        border: `1px solid ${daemonHealth ? "rgba(0,230,118,0.3)" : "rgba(255,23,68,0.3)"}`,
+                        borderRadius: "99px",
+                        fontSize: "0.75rem",
+                        fontWeight: 700,
+                        color: daemonHealth ? "#00E676" : "#FF1744",
+                    }}>
+                        {daemonHealth ? "Opérationnel" : "Hors ligne"}
+                    </div>
                 </div>
 
                 {/* Services */}
