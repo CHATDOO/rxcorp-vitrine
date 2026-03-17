@@ -1,0 +1,50 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model User {
+  id        String    @id @default(cuid())
+  email     String    @unique
+  name      String
+  password  String
+  role      Role      @default(CLIENT)
+  createdAt DateTime  @default(now())
+  services  Service[]
+  sessions  Session[]
+}
+
+model Service {
+  id        String        @id @default(cuid())
+  name      String
+  wingsUuid String        @unique
+  game      String
+  status    ServiceStatus @default(ACTIVE)
+  userId    String
+  user      User          @relation(fields: [userId], references: [id])
+  createdAt DateTime      @default(now())
+  expiresAt DateTime?
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  token     String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+enum Role {
+  CLIENT
+  ADMIN
+}
+
+enum ServiceStatus {
+  ACTIVE
+  SUSPENDED
+  CANCELLED
+}

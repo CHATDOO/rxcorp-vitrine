@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import Link from "next/link";
 import { Gamepad2, CheckCircle2 } from "lucide-react";
 import type { Product, Category } from "@/lib/paymenter";
@@ -17,19 +18,51 @@ const GAMES_LIST = [
 ];
 
 export function GamesJeuxInteractive({ products, categories }: { products: Product[], categories: Category[] }) {
+    const [activeCategory, setActiveCategory] = useState<number | null>(null);
+
     const getEmojiForCategory = (name: string) => {
         const found = GAMES_LIST.find(g => name.toLowerCase().includes(g.name.toLowerCase()));
         return found ? found.emoji : "🎮";
     };
+
+    const filteredProducts = activeCategory === null
+        ? products
+        : products.filter(p => p.category_id === activeCategory);
+
     return (
         <>
-            {/* Jeux grid — hover interactif */}
+            {/* Jeux grid — filtre interactif */}
             <section className="section-sm" style={{ background: "var(--bg-dark)" }}>
                 <div className="container-xl">
                     <h2 className="heading-md" style={{ textAlign: "center", marginBottom: "40px" }}>
                         Jeux <span className="gradient-text">supportés</span>
                     </h2>
                     <div style={{ display: "flex", flexWrap: "wrap", gap: "12px", justifyContent: "center" }}>
+                        {/* "Tout" filter button */}
+                        <div
+                            className="glass"
+                            style={{
+                                display: "flex", alignItems: "center", gap: "10px",
+                                padding: "14px 20px", borderRadius: "12px",
+                                fontSize: "0.92rem", fontWeight: 600,
+                                transition: "border-color 0.2s, transform 0.2s",
+                                cursor: "pointer",
+                                borderColor: activeCategory === null ? "rgba(232,0,45,0.6)" : undefined,
+                                background: activeCategory === null ? "rgba(232,0,45,0.08)" : undefined,
+                            }}
+                            onClick={() => setActiveCategory(null)}
+                            onMouseEnter={e => {
+                                const el = e.currentTarget as HTMLElement;
+                                el.style.transform = "translateY(-3px)";
+                            }}
+                            onMouseLeave={e => {
+                                const el = e.currentTarget as HTMLElement;
+                                el.style.transform = "translateY(0)";
+                            }}
+                        >
+                            <span style={{ fontSize: "1.4rem" }}>🎮</span> Tous
+                        </div>
+
                         {categories.map((cat) => (
                             <div
                                 key={cat.id}
@@ -39,8 +72,11 @@ export function GamesJeuxInteractive({ products, categories }: { products: Produ
                                     padding: "14px 20px", borderRadius: "12px",
                                     fontSize: "0.92rem", fontWeight: 600,
                                     transition: "border-color 0.2s, transform 0.2s",
-                                    cursor: "default",
+                                    cursor: "pointer",
+                                    borderColor: activeCategory === cat.id ? "rgba(232,0,45,0.6)" : undefined,
+                                    background: activeCategory === cat.id ? "rgba(232,0,45,0.08)" : undefined,
                                 }}
+                                onClick={() => setActiveCategory(activeCategory === cat.id ? null : cat.id)}
                                 onMouseEnter={e => {
                                     const el = e.currentTarget as HTMLElement;
                                     el.style.borderColor = "rgba(232,0,45,0.4)";
@@ -48,7 +84,7 @@ export function GamesJeuxInteractive({ products, categories }: { products: Produ
                                 }}
                                 onMouseLeave={e => {
                                     const el = e.currentTarget as HTMLElement;
-                                    el.style.borderColor = "var(--glass-border)";
+                                    el.style.borderColor = activeCategory === cat.id ? "rgba(232,0,45,0.6)" : "var(--glass-border)";
                                     el.style.transform = "translateY(0)";
                                 }}
                             >
@@ -64,9 +100,22 @@ export function GamesJeuxInteractive({ products, categories }: { products: Produ
                 <div className="container-xl">
                     <div style={{ textAlign: "center", marginBottom: "48px" }}>
                         <h2 className="heading-md">Offres <span className="gradient-text">Serveurs de Jeux</span></h2>
+                        {activeCategory !== null && categories.find(c => c.id === activeCategory) && (
+                            <p style={{ color: "var(--text-secondary)", marginTop: "8px", fontSize: "0.9rem" }}>
+                                Filtré : <strong style={{ color: "var(--red-bright)" }}>
+                                    {categories.find(c => c.id === activeCategory)?.name}
+                                </strong>
+                                <button
+                                    onClick={() => setActiveCategory(null)}
+                                    style={{ marginLeft: "10px", background: "none", border: "none", color: "var(--text-muted)", cursor: "pointer", fontSize: "0.8rem", textDecoration: "underline" }}
+                                >
+                                    Voir tout
+                                </button>
+                            </p>
+                        )}
                     </div>
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "20px" }}>
-                        {products.map(p => (
+                        {filteredProducts.length > 0 ? filteredProducts.map(p => (
                             <div key={p.id} className={`pricing-card${p.is_featured ? " featured" : ""}`}>
                                 {p.is_featured && <div className="badge badge-red" style={{ marginBottom: "12px" }}>⭐ Populaire</div>}
                                 <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "8px" }}>
@@ -100,7 +149,11 @@ export function GamesJeuxInteractive({ products, categories }: { products: Produ
                                     Commander
                                 </a>
                             </div>
-                        ))}
+                        )) : (
+                            <div style={{ gridColumn: "1/-1", textAlign: "center", padding: "40px", color: "var(--text-secondary)" }}>
+                                Aucune offre dans cette catégorie pour le moment.
+                            </div>
+                        )}
                     </div>
                 </div>
             </section>
