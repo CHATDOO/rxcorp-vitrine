@@ -6,17 +6,19 @@ import { Zap, Twitter, Github, MessageSquare, Shield, Server, ExternalLink } fro
 const FOOTER_LINKS = {
     Hébergement: [
         { href: "/serveurs-jeux", label: "Serveurs de Jeux" },
+        { href: "https://clients.rxcorp.fr/store", label: "Voir les offres", external: true },
+    ],
+    Support: [
+        { href: "/faq", label: "FAQ" },
+        { href: "/statut", label: "Statut du réseau" },
+        { href: "/contact", label: "Nous contacter" },
+        { href: "https://clients.rxcorp.fr", label: "Espace client", external: true },
     ],
     Entreprise: [
         { href: "/a-propos", label: "À propos" },
-        { href: "/statut", label: "Statut du réseau" },
-        { href: "/contact", label: "Contact" },
-        { href: "https://clients.rxcorp.fr", label: "Espace client", external: true },
-    ],
-    Légal: [
         { href: "/mentions-legales", label: "Mentions légales" },
         { href: "/cgv", label: "CGV" },
-        { href: "/confidentialite", label: "Politique de confidentialité" },
+        { href: "/confidentialite", label: "Confidentialité" },
     ],
 };
 
@@ -162,8 +164,21 @@ export default function Footer() {
                     ))}
                 </div>
 
+                {/* Trust badges */}
+                <div style={{ display: "flex", gap: "10px", justifyContent: "center", margin: "32px 0 0", flexWrap: "wrap" }}>
+                    {["🔒 SSL Sécurisé", "🇫🇷 Hébergé en France", "✓ RGPD Conforme", "🛡️ Anti-DDoS 1 Tbps", "⚡ Uptime 99.9%"].map(badge => (
+                        <span key={badge} style={{
+                            fontSize: "0.73rem",
+                            color: "var(--text-muted)",
+                            border: "1px solid rgba(255,255,255,0.07)",
+                            borderRadius: "99px",
+                            padding: "4px 12px",
+                        }}>{badge}</span>
+                    ))}
+                </div>
+
                 {/* Bottom bar */}
-                <div className="divider-red" style={{ margin: "40px 0 24px" }} />
+                <div className="divider-red" style={{ margin: "24px 0" }} />
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
                     <p style={{ color: "var(--text-muted)", fontSize: "0.82rem" }}>
                         © {new Date().getFullYear()} rxcorp. Tous droits réservés. Hébergé en France 🇫🇷

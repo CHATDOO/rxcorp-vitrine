@@ -5,6 +5,7 @@ import { Menu, X, Zap } from "lucide-react";
 
 const NAV_ITEMS = [
     { href: "/serveurs-jeux", label: "Serveurs de Jeux" },
+    { href: "/faq", label: "FAQ" },
     { href: "/statut", label: "Statut" },
     { href: "/a-propos", label: "À propos" },
     { href: "/contact", label: "Contact" },

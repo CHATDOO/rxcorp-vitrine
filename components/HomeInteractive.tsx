@@ -1,10 +1,34 @@
 "use client";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 import {
     CheckCircle2, Star, Gamepad2, ArrowRight, Server,
     Shield, Zap, Clock,
 } from "lucide-react";
 import type { Product } from "@/lib/paymenter";
+
+// ─── Animated Counter Hook ───────────────────────────────────────────────────
+function useAnimatedCounter(target: number, duration = 2000) {
+    const [value, setValue] = useState(0);
+    const ref = useRef<HTMLDivElement>(null);
+    useEffect(() => {
+        const obs = new IntersectionObserver(([entry]) => {
+            if (!entry.isIntersecting) return;
+            const t0 = Date.now();
+            const tick = () => {
+                const p = Math.min((Date.now() - t0) / duration, 1);
+                const eased = 1 - Math.pow(1 - p, 3);
+                setValue(Math.floor(eased * target));
+                if (p < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+            obs.disconnect();
+        }, { threshold: 0.3 });
+        if (ref.current) obs.observe(ref.current);
+        return () => obs.disconnect();
+    }, [target, duration]);
+    return { value, ref };
+}
 
 /* 
   IMPORTANT: All icon references and interactive data are defined CLIENT-SIDE
@@ -138,6 +162,10 @@ const GAMES_DATA = [
     { name: "Terraria", emoji: "🌿" },
     { name: "Palworld", emoji: "🌟" },
     { name: "FiveM", emoji: "🚗" },
+    { name: "DayZ", emoji: "🧟" },
+    { name: "SCUM", emoji: "🔪" },
+    { name: "V Rising", emoji: "🧛" },
+    { name: "Enshrouded", emoji: "🌫️" },
 ];
 
 export function GamesGrid() {
@@ -185,6 +213,9 @@ const TESTIMONIALS = [
     { name: "Alexandre M.", role: "Owner MineRealm", stars: 5, text: "Serveur ultra fluide, jamais un lag. Le support est réactif en moins de 20 minutes. Je recommande sans hésiter." },
     { name: "Sarah K.", role: "Admin Serveur Palworld", stars: 5, text: "Mon serveur fonctionne à merveille sans aucun lag pour plus de 20 joueurs. C'est le jour et la nuit côté fluidité." },
     { name: "Théo B.", role: "Streamer FiveM", stars: 5, text: "Anti-DDoS efficace même sur les attaques massives. Mon serveur FiveM n'a jamais planté depuis 8 mois." },
+    { name: "Lucas R.", role: "Owner ARK Cluster", stars: 5, text: "Migration depuis OVH en 30 minutes. Les performances sont incomparables — -30% de temps de chargement des zones." },
+    { name: "Emma D.", role: "Community Manager", stars: 5, text: "Panel Pterodactyl intuitif, support Discord réactif en moins de 10 min. Service vraiment irréprochable !" },
+    { name: "Kevin S.", role: "Rust Server Admin", stars: 5, text: "99.9% uptime respecté depuis 6 mois. Zéro interruption non planifiée. Exactement ce que je cherchais." },
 ];
 
 export function Testimonials() {

@@ -523,3 +523,41 @@ button:hover~#cursor-ring {
 .clip-angle {
   clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
 }
+
+/* ===========================
+   MOBILE OPTIMIZATION
+   =========================== */
+@media (max-width: 480px) {
+  .heading-xl { font-size: clamp(1.8rem, 8vw, 2.5rem) !important; }
+  .heading-lg { font-size: clamp(1.5rem, 6vw, 2rem) !important; }
+  .heading-md { font-size: clamp(1.3rem, 5vw, 1.8rem) !important; }
+  .btn-primary, .btn-ghost { padding: 14px 22px !important; font-size: 0.9rem !important; }
+  .container-xl { padding-left: 16px !important; padding-right: 16px !important; }
+  .pricing-card { padding: 20px 16px !important; }
+  .section { padding: 48px 0 !important; }
+  .section-sm { padding: 32px 0 !important; }
+  .terminal { display: none !important; }
+}
+
+@media (max-width: 360px) {
+  .btn-primary, .btn-ghost { width: 100%; justify-content: center; }
+  .heading-xl { font-size: 1.6rem !important; }
+}
+
+/* ===========================
+   SCROLL PROGRESS BAR
+   =========================== */
+@property --scroll-progress {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
+/* ===========================
+   PRINT STYLES
+   =========================== */
+@media print {
+  .navbar, footer, .btn-primary, .btn-ghost, .orb, .grid-bg, .noise-bg { display: none !important; }
+  body { background: white !important; color: black !important; }
+  a { color: black !important; text-decoration: underline; }
+}
